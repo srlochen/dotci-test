@@ -1,4 +1,5 @@
 environment:
+  language: ruby
   image: openshift/centos-ruby
 build:
   run:

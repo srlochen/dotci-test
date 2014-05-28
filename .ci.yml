@@ -1,0 +1,10 @@
+environment:
+  image: openshift/centos-ruby
+  services:
+    - orchardup/mysql
+build:
+  run:
+    - echo meow
+    - sleep 10
+    - ifconfig | grep "inet addr"
+    - mysql -u root -h mysql -e "show processlist;"
